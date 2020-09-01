@@ -1,0 +1,48 @@
+.section-header {
+  height: 12.8rem;
+  width: 100rem;
+  background-color: white;
+  margin-left: 4rem;
+  margin-top: 3.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  > .section-header__description {
+    > .title {
+      color: var(--dark);
+      font-weight: bolder;
+      padding-bottom: 1.6rem;
+    }
+  }
+  > .section-header__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 42rem;
+
+    > .preview {
+      height: 4.8rem;
+      width: 16.7rem;
+      background-color: white;
+      border: 0.1rem solid var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 1.6rem;
+      padding-right: 2.7rem;
+      color: var(--orange);
+    }
+
+    > .new-user {
+      height: 4.8rem;
+      width: 22.5rem;
+      background-color: var(--orange);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 1.6rem;
+      padding-right: 2.7rem;
+    }
+  }
+}

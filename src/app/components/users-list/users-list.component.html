@@ -1,0 +1,50 @@
+<div class="table">
+  <div class="table_titles">
+    <div>Foto</div>
+    <div>Nombre</div>
+    <div>Apellido Paterno</div>
+    <div>Apellido Materno</div>
+    <div>Correo</div>
+    <div>Rol</div>
+    <div>Status</div>
+    <div class="actions"></div>
+  </div>
+  <div cdkDropList (cdkDropListDropped)="drop($event)">
+    <div
+      *ngFor="
+        let user of users
+          | orderlist: orderAsc
+          | status: filterStatus
+          | search: search
+      "
+      cdkDrag
+    >
+      <div class="value">
+        <img src="{{ user.picture }}" alt="foto_perfil" class="picture" />
+        <div class="name">
+          {{ user.name }}
+        </div>
+        <div class="fathername">
+          {{ user.fathersLastName }}
+        </div>
+        <div class="mothername">
+          {{ user.mothersLastName }}
+        </div>
+        <div class="email">
+          {{ user.email }}
+        </div>
+        <div class="role">
+          {{ user.roleId }}
+        </div>
+        <div class="toggle">
+          <div *ngIf="user.active" class="fas fa-toggle-on"></div>
+          <div *ngIf="!user.active" class="fas fa-toggle-off"></div>
+        </div>
+        <div class="action-buttons">
+          <div class="fas fa-edit"></div>
+          <div class="fas fa-trash"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

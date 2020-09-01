@@ -1,0 +1,48 @@
+<div class="data-table">
+  <div class="data-table__filters">
+    <div class="search">
+      <div class="fas fa-search"></div>
+      Busqueda
+      <div class="separator"></div>
+      <input type="text" class="value" name="search" [(ngModel)]="search" />
+    </div>
+
+    <div>
+      <select name="amount" class="amount">
+        <option value="8">8 por pagina</option>
+        <option value="10">10 por pagina</option>
+        <option value="15">15 por pagina</option>
+      </select>
+    </div>
+    <div>
+      <select
+        (change)="orderList()"
+        [(ngModel)]="order"
+        name="order"
+        class="order"
+      >
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+      </select>
+    </div>
+    <div class="status">
+      <select
+        (change)="statusFilter()"
+        [(ngModel)]="status"
+        name="status"
+        class="status"
+      >
+        <option value="">Todas</option>
+        <option value="activados">Activados</option>
+        <option value="desactivados">Desactivados</option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <app-users-list
+      [orderAsc]="orderAsc"
+      [filterStatus]="filterStatus"
+      [search]="search"
+    ></app-users-list>
+  </div>
+</div>
