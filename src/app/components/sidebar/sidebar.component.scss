@@ -1,0 +1,27 @@
+.side-bar {
+  height: 97.2rem;
+  width: 25.6rem;
+  background-color: white;
+
+  .side-bar__active {
+    height: 5.5rem;
+    width: 0.3rem;
+    background-color: var(--orange);
+  }
+
+  > .side-bar__option {
+    display: flex;
+    align-items: center;
+    height: 5.6rem;
+    width: 25.6rem;
+    text-align: center;
+    border: 0.1rem solid var(--soft-grey);
+
+    > .fa-user {
+      color: var(--orange);
+      padding-left: 1.3rem;
+      padding-right: 1.7rem;
+      font-size: 1.4rem;
+    }
+  }
+}

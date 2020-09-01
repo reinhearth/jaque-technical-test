@@ -1,0 +1,37 @@
+.header {
+  height: 6.4rem;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  > .header_logo {
+    display: flex;
+    padding-left: 2.4rem;
+
+    > .header_title {
+      color: var(--dark);
+      font-weight: bolder;
+      font-size: 2rem;
+      padding-left: 0.9rem;
+    }
+    > .logo {
+      height: 2.386rem;
+      width: 2.4rem;
+    }
+  }
+  .header_user_box {
+    height: 4rem;
+    width: 23rem;
+    border-radius: 2px;
+    background-color: var(--shadow-grey);
+    margin-right: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    > .fa-arrow-down {
+      color: var(--orange);
+    }
+  }
+}
