@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'app-modal',
@@ -7,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
   @Output() modalClose = new EventEmitter();
+  color: ThemePalette = 'primary';
   constructor() {}
 
   ngOnInit(): void {}

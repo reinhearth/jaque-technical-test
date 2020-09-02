@@ -15,20 +15,43 @@
         <div class="picture_label">
           JPG, PNG | Tamaño mínimo de 300px × 300px
         </div>
-        <input type="text" class="input_picture" />
+        <input
+          type="text"
+          class="input_picture"
+          placeholder="URL"
+          class="input_style"
+        />
       </div>
     </div>
 
     <div class="content_information">
       <div class="information_label">Información básica</div>
       <div class="firts_row">
-        <input type="text" placeholder="Nombre" />
-        <input type="text" placeholder="Apellido Paterno" />
+        <input type="text" placeholder="Nombre" class="input_style" />
+        <input type="text" placeholder="Apellido Paterno" class="input_style" />
       </div>
-      <div class="second_row"></div>
-      <div class="third_row"></div>
+      <div class="second_row">
+        <input type="text" placeholder="Apellido materno" class="input_style" />
+        <input
+          type="email"
+          placeholder="Correo electronico"
+          class="input_style"
+        />
+      </div>
+      <div class="third_row">
+        <select name="rol" class="rol">
+          <option value="Dueño">Dueño</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Staff">Staff</option>
+        </select>
+        <mat-slide-toggle [checked]="true" [color]="color"
+          >Activo</mat-slide-toggle
+        >
+      </div>
     </div>
-
-    <div (click)="closeModal()">Cerrar</div>
+    <div class="actions">
+      <div class="close" (click)="closeModal()">Cerrar</div>
+      <div class="save">Guardar Usuario</div>
+    </div>
   </div>
 </div>

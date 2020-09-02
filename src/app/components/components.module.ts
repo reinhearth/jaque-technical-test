@@ -15,6 +15,7 @@ import { OrderlistPipe } from '../pipes/orderlist.pipe';
 import { StatusPipe } from '../pipes/status.pipe';
 import { SearchPipe } from '../pipes/search.pipe';
 import { PaginatorPipe } from '../pipes/paginator.pipe';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { FormsModule } from '@angular/forms';
 import { ModalComponent } from './modal/modal.component';
@@ -26,6 +27,7 @@ import { ModalComponent } from './modal/modal.component';
     BrowserAnimationsModule,
     DragDropModule,
     MatPaginatorModule,
+    MatSlideToggleModule,
   ],
   declarations: [
     HeaderComponent,
