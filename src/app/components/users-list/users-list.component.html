@@ -1,13 +1,14 @@
 <div class="table">
   <div class="table_titles">
-    <div>Foto</div>
-    <div>Nombre</div>
-    <div>Apellido Paterno</div>
-    <div>Apellido Materno</div>
-    <div>Correo</div>
-    <div>Rol</div>
-    <div>Status</div>
-    <div class="actions"></div>
+    <div class="title_drag"></div>
+    <div class="title_picture">Foto</div>
+    <div class="title_name">Nombre</div>
+    <div class="title_fathername">Apellido Paterno</div>
+    <div class="title_mothername">Apellido Materno</div>
+    <div class="title_email">Correo</div>
+    <div class="title_rol">Rol</div>
+    <div class="title_status">Status</div>
+    <div class="title_actions"></div>
   </div>
   <div cdkDropList (cdkDropListDropped)="drop($event)">
     <div
@@ -21,7 +22,10 @@
       cdkDrag
     >
       <div class="value">
-        <img src="{{ user.picture }}" alt="foto_perfil" class="picture" />
+        <div class="fas fa-grip-vertical"></div>
+        <div class="picture_wraper">
+          <img src="{{ user.picture }}" alt="foto_perfil" class="picture" />
+        </div>
         <div class="name">
           {{ user.name }}
         </div>

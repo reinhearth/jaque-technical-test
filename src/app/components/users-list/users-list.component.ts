@@ -1,12 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { PageEvent } from '@angular/material/paginator';
+import { PageEvent, MatPaginator } from '@angular/material/paginator';
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
   styleUrls: ['./users-list.component.scss'],
 })
 export class UsersListComponent implements OnInit {
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @Input() orderAsc;
   @Input() filterStatus;
   @Input() search;
@@ -154,7 +155,9 @@ export class UsersListComponent implements OnInit {
     this.pageNumber = 1;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.paginator._intl.itemsPerPageLabel = 'Usuarios Por Pagina';
+  }
   drop(event: CdkDragDrop<any[]>): void {
     console.log(event);
 
