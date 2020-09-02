@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserMenuComponent } from './user-menu/user-menu.component';
@@ -12,11 +14,18 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { OrderlistPipe } from '../pipes/orderlist.pipe';
 import { StatusPipe } from '../pipes/status.pipe';
 import { SearchPipe } from '../pipes/search.pipe';
+import { PaginatorPipe } from '../pipes/paginator.pipe';
 
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, BrowserAnimationsModule, DragDropModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    DragDropModule,
+    MatPaginatorModule,
+  ],
   declarations: [
     HeaderComponent,
     SidebarComponent,
@@ -26,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     OrderlistPipe,
     StatusPipe,
     SearchPipe,
+    PaginatorPipe,
   ],
   exports: [
     HeaderComponent,

@@ -16,6 +16,7 @@
           | orderlist: orderAsc
           | status: filterStatus
           | search: search
+          | paginator: pageSize:pageNumber
       "
       cdkDrag
     >
@@ -46,5 +47,12 @@
         </div>
       </div>
     </div>
+    <mat-paginator
+      [length]="users.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[5, 10, 15]"
+      (page)="handlePage($event)"
+    >
+    </mat-paginator>
   </div>
 </div>

@@ -8,13 +8,6 @@
     </div>
 
     <div>
-      <select name="amount" class="amount">
-        <option value="8">8 por pagina</option>
-        <option value="10">10 por pagina</option>
-        <option value="15">15 por pagina</option>
-      </select>
-    </div>
-    <div>
       <select
         (change)="orderList()"
         [(ngModel)]="order"

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { PageEvent } from '@angular/material/paginator';
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
@@ -9,6 +10,8 @@ export class UsersListComponent implements OnInit {
   @Input() orderAsc;
   @Input() filterStatus;
   @Input() search;
+  pageSize: any;
+  pageNumber: any;
   users = [
     {
       picture: 'http://www.fillmurray.com/200/300',
@@ -146,7 +149,10 @@ export class UsersListComponent implements OnInit {
       active: false,
     },
   ];
-  constructor() {}
+  constructor() {
+    this.pageSize = 5;
+    this.pageNumber = 1;
+  }
 
   ngOnInit(): void {}
   drop(event: CdkDragDrop<any[]>): void {
@@ -155,5 +161,10 @@ export class UsersListComponent implements OnInit {
     const prevIndex = this.users.findIndex((d, e) => e === event.currentIndex);
     moveItemInArray(this.users, prevIndex, event.currentIndex);
     this.users = [...this.users];
+  }
+
+  handlePage(e: PageEvent): void {
+    this.pageSize = e.pageSize;
+    this.pageNumber = e.pageIndex + 1;
   }
 }
