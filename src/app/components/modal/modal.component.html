@@ -1,3 +1,34 @@
-<div class="content">
-  <div (click)="closeModal()">Cerrar</div>
+<div class="modal">
+  <div class="content">
+    <div class="title">Agregar Nuevo Usuario</div>
+    <div class="title_photo">Foto de perfil</div>
+    <div class="content_picture">
+      <div class="perfil_picture">
+        <img
+          class="picture"
+          src="assets/perfil_default.png"
+          alt="imagen_perfil"
+        />
+      </div>
+
+      <div class="picture_info">
+        <div class="picture_label">
+          JPG, PNG | Tamaño mínimo de 300px × 300px
+        </div>
+        <input type="text" class="input_picture" />
+      </div>
+    </div>
+
+    <div class="content_information">
+      <div class="information_label">Información básica</div>
+      <div class="firts_row">
+        <input type="text" placeholder="Nombre" />
+        <input type="text" placeholder="Apellido Paterno" />
+      </div>
+      <div class="second_row"></div>
+      <div class="third_row"></div>
+    </div>
+
+    <div (click)="closeModal()">Cerrar</div>
+  </div>
 </div>

@@ -1,5 +1,85 @@
+.modal {
+  background: rgba(33, 33, 33, 0.9);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
 .content {
-  height: 770px;
-  width: 633px;
-  background-color: var(--shadow-grey);
+  height: 70rem;
+  width: 60rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-top: 4rem;
+  > .title {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--dark);
+  }
+
+  > .title_photo {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    margin-top: 3rem;
+    color: var(--dark);
+  }
+
+  > .content_picture {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+
+    > .perfil_picture {
+      width: 15rem;
+      > .picture {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 15rem;
+      }
+    }
+
+    > .picture_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      > .picture_label {
+        margin-bottom: 2rem;
+      }
+      > .input_picture {
+        width: 23rem;
+        height: 2rem;
+        margin-left: 1rem;
+        border: 0.1rem solid var(--orange);
+        background-color: var(--shadow-grey);
+      }
+    }
+  }
+
+  > .content_information {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    > .information_label {
+      font-size: 1.6rem;
+      font-weight: bolder;
+      color: var(--dark);
+    }
+
+    > .firts_row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }
