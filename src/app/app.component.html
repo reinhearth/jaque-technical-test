@@ -4,8 +4,9 @@
   <div class="section-body">
     <app-sidebar></app-sidebar>
     <div>
-      <app-user-menu></app-user-menu>
+      <app-user-menu (modalOpen)="sendModal($event)"></app-user-menu>
       <app-data-table></app-data-table>
     </div>
   </div>
+  <app-modal *ngIf="showModal" (modalClose)="closeModal($event)"></app-modal>
 </div>

@@ -17,6 +17,7 @@ import { SearchPipe } from '../pipes/search.pipe';
 import { PaginatorPipe } from '../pipes/paginator.pipe';
 
 import { FormsModule } from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
@@ -36,12 +37,14 @@ import { FormsModule } from '@angular/forms';
     StatusPipe,
     SearchPipe,
     PaginatorPipe,
+    ModalComponent,
   ],
   exports: [
     HeaderComponent,
     SidebarComponent,
     UserMenuComponent,
     DataTableComponent,
+    ModalComponent,
   ],
 })
 export class ComponentsModule {}
